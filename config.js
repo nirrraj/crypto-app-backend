@@ -2,8 +2,19 @@
 
 /** Shared config for application; can be required many places. */
 
-require("dotenv").config();
+const { Client } = require('pg');
+const dotenv = require('dotenv');
+
+dotenv.config();
 require("colors");
+
+const clientVals = new Client({
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT,
+  database: process.env.DB_NAME,
+});
 
 const SECRET_KEY = process.env.SECRET_KEY || "secret-dev";
 const PORT = +process.env.PORT || 3000;
@@ -33,4 +44,5 @@ module.exports = {
   PORT,
   BCRYPT_WORK_FACTOR,
   getDatabaseUri,
+  clientVals,
 };
