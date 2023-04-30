@@ -2,9 +2,9 @@
 
 This is the Express backend for CryptoApp
 
-To run this:
+To run this (after ensuring postgresql server is running):
 
-    node server.js
+    nodemon server.js
     
 To run the tests:
 
