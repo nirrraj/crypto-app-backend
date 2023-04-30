@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "properties": {
+    "userId": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 20
+    },
+    "currencyName": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 30
+    },
+    "currencyAmount": {
+      "type": "number",
+      "minimum": 0
+    },
+    "currencyType": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 30
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "userId",
+    "currencyName",
+    "currencyAmount",
+    "currencyType"
+  ]
+}

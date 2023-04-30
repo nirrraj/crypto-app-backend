@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "properties": {
+    "userId": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "transactionType": {
+      "type": "string"
+    },
+    "startCurrencyName": {
+      "type": "string"
+    },
+    "startCurrencyAmount": {
+      "type": "number",
+      "minimum": 0
+    },
+    "startCurrencyType": {
+      "type": "string"
+    },
+    "endCurrencyName": {
+      "type": "string"
+    },
+    "endCurrencyAmount": {
+      "type": "number",
+      "minimum": 0
+    },
+    "endCurrencyType": {
+      "type": "string"
+    },
+    "timestampUtc": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "userId",
+    "transactionType",
+    "endCurrencyName",
+    "endCurrencyAmount",
+    "endCurrencyType",
+    "timestampUtc"
+  ]
+}
